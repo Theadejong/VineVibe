@@ -156,19 +156,19 @@ export default function WineDetailsPage(props) {
         <Columns.Column className="is-narrow">
           <button
          
-            className="button is-warning is-rounded"
+            className="button"
             onClick={(e) => handleLove(e) }
           >
             {loved ? <FaHeartBroken /> : <FaHeart />}
           </button>
           <button
-            className="button is-warning is-rounded"
+            className="button"
             onClick={(e) => handleTried(e)}
           >
             {tried ? <FaRegStar /> : <FaStar />}
           </button>
           <button
-            className="button is-warning is-rounded"
+            className="button"
             onClick={(e) => handleWannaTry(e)}
           >
             {wannaTry ? <FaTimes /> : <FaCheck />}

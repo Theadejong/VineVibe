@@ -53,7 +53,7 @@ function AddReview(props) {
           <Columns.Column className="is-narrow">
             <motion.button
               type="submit"
-              className="button is-warning is-rounded"
+              className="button"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >

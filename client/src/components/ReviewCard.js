@@ -103,7 +103,7 @@ export default function ReviewCard(props) {
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="button is-warning is-rounded is-small"
+              className="button is-small"
               onClick={(e) => handleEdit(e)}
             >
               <FaPencilAlt />
@@ -111,7 +111,7 @@ export default function ReviewCard(props) {
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="button is-warning is-rounded is-small"
+              className="button is-small"
               onClick={(e) => handleDelete(e)}
             >
               <FaTrashAlt />

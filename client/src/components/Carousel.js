@@ -15,6 +15,9 @@ export default function ImageCarousel() {
       autoPlay
       infiniteLoop
       width={"100%"}
+      showArrows={false}
+      showIndicators={false}
+      showStatus={false}
       showThumbs={false}
     >
       <div>

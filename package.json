@@ -10,9 +10,9 @@
   },
   "scripts": {
     "start": "node ./bin/www",
-    "dev:all": "concurrently \"PORT=3000 nodemon ./bin/www\" \"PORT=5000 yarn workspace client run start\"",
+    "dev:all": "concurrently \"PORT=3000 nodemon -i ./client ./bin/www\" \"PORT=5000 yarn workspace client run start\"",
     "dev:front": "PORT=5000 yarn workspace client run start",
-    "dev:back": " PORT=3000 nodemon ./bin/www",
+    "dev:back": " PORT=3000 nodemon -i ./client ./bin/www",
     "build": "yarn workspace client run build"
   },
   "dependencies": {

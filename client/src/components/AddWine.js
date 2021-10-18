@@ -74,7 +74,7 @@ export default function AddWine() {
                       className="input"
                       value={title}
                       onChange={(e) => setTitle(e.target.value)}
-                    ></input>
+                     />
                   </div>
                 </div>
                 <div className="field">
@@ -87,7 +87,7 @@ export default function AddWine() {
                       className="input"
                       value={description}
                       onChange={(e) => setDescription(e.target.value)}
-                    ></input>
+                     />
                   </div>
                 </div>
                 <div className="field">
@@ -100,7 +100,7 @@ export default function AddWine() {
                       className="input"
                       value={price}
                       onChange={(e) => setPrice(e.target.value)}
-                    ></input>
+                     />
                   </div>
                 </div>
                 <div className="field">
@@ -113,7 +113,7 @@ export default function AddWine() {
                       className="input"
                       value={variety}
                       onChange={(e) => setVariety(e.target.value)}
-                    ></input>
+                     />
                   </div>
                 </div>
                 <div className="field">
@@ -126,7 +126,7 @@ export default function AddWine() {
                       className="input"
                       value={region}
                       onChange={(e) => setRegion(e.target.value)}
-                    ></input>
+                     />
                   </div>
                 </div>
                 <div className="field">
@@ -139,7 +139,7 @@ export default function AddWine() {
                       className="input"
                       value={province}
                       onChange={(e) => setProvince(e.target.value)}
-                    ></input>
+                     />
                   </div>
                 </div>
                 <div className="field">
@@ -152,7 +152,7 @@ export default function AddWine() {
                       className="input"
                       value={country}
                       onChange={(e) => setCountry(e.target.value)}
-                    ></input>
+                     />
                   </div>
                 </div>
                 <div className="field">
@@ -165,12 +165,12 @@ export default function AddWine() {
                       className="input"
                       value={winery}
                       onChange={(e) => setWinery(e.target.value)}
-                    ></input>
+                     />
                   </div>
                 </div>
                 <div className="field">
                   <motion.button
-                    className="button is-warning"
+                    className="button"
                     type="submit"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}

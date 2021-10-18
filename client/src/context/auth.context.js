@@ -33,9 +33,13 @@ function AuthProviderWrapper(props) {
           setIsLoggedIn(true);
           setIsLoading(false);
         } catch (error) {
+          let msg = error;
+          if (error.response.data.message !== undefined) {
+            msg = error.response.data.message
+          }
           console.log(
             "Failed to fetch user after successfully verifying the JWT:",
-            error.response.data.message
+            msg
           );
         }
       } catch (error) {
@@ -54,9 +58,9 @@ function AuthProviderWrapper(props) {
       setIsLoading(false);
     }
   };
-  const logInUser = (token) => {
+  const logInUser = async (token) => {
     localStorage.setItem("authToken", token);
-    verifyStoredToken();
+    await verifyStoredToken();
   };
   const logOutUser = () => {
     localStorage.removeItem("authToken");

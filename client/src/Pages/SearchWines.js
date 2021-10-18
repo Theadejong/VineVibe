@@ -68,7 +68,7 @@ export default function SearchWines() {
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="pagination-previous button is-warning is-rounded"
+            className="pagination-previous button"
             onClick={previousPage}
           >
             Previous
@@ -76,7 +76,7 @@ export default function SearchWines() {
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="pagination-next button is-warning is-rounded"
+            className="pagination-next button"
             onClick={nextPage}
           >
             Next page

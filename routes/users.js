@@ -49,8 +49,7 @@ router.post("/create-user", (req, res) => {
     .then((foundUser) => {
       // If the user with the same email already exists, send an error response
       if (foundUser) {
-        res.status(400).json({ message: "User already exists." });
-        return;
+        throw new Error("User already exists.");
       }
       // If email is unique, proceed to hash the password
       const salt = bcrypt.genSaltSync(saltRounds);
@@ -65,8 +64,14 @@ router.post("/create-user", (req, res) => {
       const { username, email, _id } = createdUser;
       // Create a new object that doesn't expose the password
       const user = { username, email, _id };
+
+      // Create and sign the token
+      const authToken = jwt.sign(user, process.env.TOKEN_SECRET, {
+        algorithm: "HS256",
+        expiresIn: "6h",
+      });
       // Send a json response containing the user object
-      res.status(201).json({ user: user });
+      res.status(201).json({ authToken, user });
     })
     .catch((err) => {
       console.log(err);

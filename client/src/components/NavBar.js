@@ -43,7 +43,7 @@ function Navbar() {
                 {" "}
                 <motion.button
                   id="logButton"
-                  className="button is-normal"
+                  className="button is-white"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
@@ -54,7 +54,7 @@ function Navbar() {
                 {" "}
                 <motion.button
                   id="logButton"
-                  className="button is-normal"
+                  className="button is-white"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >

@@ -7,9 +7,9 @@
   line-height: 0;
 }
 
-.custom-shape-divider-top-1633006772 .shape-fill {
-  fill: #4c2c45;
-}
+/* .custom-shape-divider-top-1633006772 .shape-fill {
+  fill: #cca677;
+} */
 
 .spacer {
   aspect-ratio: 960/300;
@@ -41,7 +41,6 @@
 #root {
   font-family: "WorkSans", "Lato", sans-serif;
   font-size: 24px;
-  background-color: #f8f2e9;
 }
 
 h1 {
