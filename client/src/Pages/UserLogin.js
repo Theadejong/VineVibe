@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import React from "react";
 import { useState, useContext } from "react";
 import {useHistory} from "react-router-dom";
-
 import { Users } from "../api/users";
 import { AuthContext } from "../context/auth.context";
 import wine from "../Images/aesop-wines-12MlCD5KlYw-unsplash.jpg";

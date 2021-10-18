@@ -3,10 +3,14 @@ import { useContext, useEffect, useState  } from "react";
 import { Link } from "react-router-dom";
 import { Box } from "react-bulma-components";
 import {Users} from "../api/users"
-
 import "../App.css";
 import Tabs from "../components/Tabs";
 import { AuthContext } from "../context/auth.context";
+import {
+  FaCheck,
+  FaHeart,
+  FaStar,
+} from "react-icons/fa";
 
 export default function UserProfile() {
   const { user } = useContext(AuthContext);
@@ -35,17 +39,12 @@ export default function UserProfile() {
                 have experienced, the wines that you have loved and the wines
                 you still want to explore
               </p>
-              {/* <p className="has-text-centered">
-                        <motion.button className="button is-warning" href="/">
-                            Edit Profile
-                        </motion.button>
-                    </p> */}
             </div>
           </div>
         </div>
       </div>
       <Tabs>
-        <div label="Most Loved ♥︎">
+        <div label="Most Loved ♥︎"><FaHeart />
           A collection of your favorite wines
           {updatedUser.Favorite.map((wine) => {
             return (
@@ -55,7 +54,7 @@ export default function UserProfile() {
             );
           })}
         </div>
-        <div label="Have Tried ✓">
+        <div label="Have Tried ✓" src={FaCheck}> <FaCheck />
           All the wines that you&apos;ve tried
           {updatedUser.TriedInThePast.map((wine) => {
             return (
@@ -65,7 +64,7 @@ export default function UserProfile() {
             );
           })}
         </div>
-        <div label="Want to try ★">
+        <div label="Want to try ★"> <FaStar />
           Wines to look forward to
           {updatedUser.WantToTry.map((wine) => {
             return (
